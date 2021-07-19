@@ -1,0 +1,22 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DW01A
+D One Cell Lithium-ion/Polymer Battery Protection IC
+F http://escooter.org.ua/_fr/1/DW01A-DS-10_EN.pdf
+$ENDCMP
+#
+$CMP FS8205A
+D Dual N-Channel Enhancement Mode Power MOSFET
+F https://ic-fortune.com/upload/Download/FS8205A-DS-12_EN.pdf
+$ENDCMP
+#
+$CMP L6920D
+D 1V HIGH EFFICIENCY SYNCRONOUS STEP UP CONVERTER
+F https://www.tme.eu/Document/3ff4ec16cbafbc9f453910d13de82883/L6920D-DTE.pdf
+$ENDCMP
+#
+$CMP TP4056
+F http://www.tp4056.com/d/tp4056.pdf
+$ENDCMP
+#
+#End Doc Library
