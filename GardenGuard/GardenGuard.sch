@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "GardenGuard"
-Date "2021-07-22"
+Date "2021-07-24"
 Rev "v0.1.0"
 Comp "Juraj Giertl"
 Comment1 "j74a8g@gmail.com"
@@ -27,13 +27,13 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 60982955
-P 950 1200
-F 0 "J1" H 1030 1192 50  0000 L CNN
-F 1 "Sollar" H 1030 1101 50  0000 L CNN
-F 2 "Project_footprints:ER-CON2.0-2P-SMD" H 950 1200 50  0001 C CNN
-F 3 "~" H 950 1200 50  0001 C CNN
-	1    950  1200
-	-1   0    0    -1  
+P 950 1300
+F 0 "J1" H 1030 1292 50  0000 L CNN
+F 1 "Sollar" H 1030 1201 50  0000 L CNN
+F 2 "Project_footprints:ER-CON2.0-2P-SMD" H 950 1300 50  0001 C CNN
+F 3 "~" H 950 1300 50  0001 C CNN
+	1    950  1300
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:Rotary_Encoder_Switch SW3
@@ -146,8 +146,6 @@ Wire Wire Line
 	6350 4450 6950 4450
 Wire Wire Line
 	6350 4550 6950 4550
-Wire Wire Line
-	6350 4650 6950 4650
 Wire Wire Line
 	6350 4750 6950 4750
 Wire Wire Line
@@ -413,7 +411,7 @@ U 1 1 60F87F7B
 P 5950 3600
 F 0 "C10" V 6000 3650 50  0000 L CNN
 F 1 "10uF" V 6000 3350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5950 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5950 3600 50  0001 C CNN
 F 3 "~" H 5950 3600 50  0001 C CNN
 	1    5950 3600
 	0    -1   -1   0   
@@ -674,7 +672,7 @@ F 3 "" H 3900 6600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 2750 7000 2    50   ~ 0
-GPIO13
+ONE_WIRE
 $Comp
 L Device:Battery_Cell BT2
 U 1 1 6105C44E
@@ -685,17 +683,6 @@ F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 5200 2110 50  0001 C CNN
 F 3 "~" V 5200 2110 50  0001 C CNN
 	1    5200 2050
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Q_PMOS_DGS Q2
-U 1 1 61063B11
-P 5450 1100
-F 0 "Q2" V 5400 950 50  0000 C CNN
-F 1 "FQP27P06" V 5700 1100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5650 1200 50  0001 C CNN
-F 3 "~" H 5450 1100 50  0001 C CNN
-	1    5450 1100
-	0    -1   1    0   
 $EndComp
 $Comp
 L Device:D_Schottky_Small D5
@@ -838,7 +825,7 @@ U 1 1 610EE633
 P 1500 1450
 F 0 "C2" H 1592 1496 50  0000 L CNN
 F 1 "0.1uF" H 1592 1405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1500 1450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1500 1450 50  0001 C CNN
 F 3 "~" H 1500 1450 50  0001 C CNN
 	1    1500 1450
 	1    0    0    1   
@@ -1556,17 +1543,6 @@ Wire Wire Line
 Wire Wire Line
 	10250 1550 10250 1600
 $Comp
-L Transistor_BJT:BC548 Q3
-U 1 1 619D6D28
-P 10150 1800
-F 0 "Q3" H 10341 1846 50  0000 L CNN
-F 1 "BC548" H 10341 1755 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 10350 1725 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 10150 1800 50  0001 L CNN
-	1    10150 1800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R24
 U 1 1 619D9812
 P 9700 1800
@@ -1642,15 +1618,13 @@ Wire Wire Line
 	6500 3500 6500 3750
 Wire Wire Line
 	6800 3750 6800 3500
-Text GLabel 6950 4650 2    50   Output ~ 0
-B_CHECK
 Text Label 4850 1200 0    50   ~ 0
 V_BAT
 Text Label 2800 4450 0    50   ~ 0
 V_BAT
 Text Label 6950 4050 0    50   ~ 0
 ROT_S
-Text Label 6950 4850 0    50   ~ 0
+Text Label 7400 4650 0    50   ~ 0
 ROT_B
 Text Label 6950 4750 0    50   ~ 0
 ROT_A
@@ -1859,10 +1833,85 @@ $EndComp
 Wire Wire Line
 	1650 6850 1800 6850
 Text Label 1900 6750 0    50   ~ 0
-GPIO13
+ONE_WIRE
 Wire Wire Line
 	1650 6750 1900 6750
 NoConn ~ 1250 3800
 NoConn ~ 1250 3900
 NoConn ~ 1250 4000
+$Comp
+L Device:Q_NPN_BEC Q3
+U 1 1 6101ABC4
+P 10150 1800
+F 0 "Q3" H 10341 1846 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 10341 1755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 10350 1900 50  0001 C CNN
+F 3 "~" H 10150 1800 50  0001 C CNN
+	1    10150 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GSD Q2
+U 1 1 610925FE
+P 5450 1100
+F 0 "Q2" V 5699 1100 50  0000 C CNN
+F 1 "FQP27P06" V 5790 1100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5650 1200 50  0001 C CNN
+F 3 "~" H 5450 1100 50  0001 C CNN
+	1    5450 1100
+	0    -1   1    0   
+$EndComp
+Text Label 6950 4650 0    50   ~ 0
+ONE_WIRE
+Text Label 6950 4850 0    50   ~ 0
+B_CHECK
+Wire Wire Line
+	6350 4650 7400 4650
+Text Label 3350 1750 0    11   ~ 0
+dw01a_cs
+Text Label 2900 1850 0    11   ~ 0
+prog
+Text Label 2950 1750 0    50   ~ 0
+T_BAT
+Wire Wire Line
+	2900 1750 2950 1750
+Text Label 3750 2000 0    11   ~ 0
+dw01a_oc
+Text Label 3950 2000 0    11   ~ 0
+dw01a_od
+Text Label 4350 1500 0    11   ~ 0
+dw01a_vcc
+$Comp
+L Device:C_Small C17
+U 1 1 61280119
+P 4150 850
+F 0 "C17" H 4242 896 50  0000 L CNN
+F 1 "0.1uF" H 4242 805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4150 850 50  0001 C CNN
+F 3 "~" H 4150 850 50  0001 C CNN
+	1    4150 850 
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 61280369
+P 4250 850
+F 0 "#PWR0107" H 4250 700 50  0001 C CNN
+F 1 "VCC" H 4265 1023 50  0000 C CNN
+F 2 "" H 4250 850 50  0001 C CNN
+F 3 "" H 4250 850 50  0001 C CNN
+	1    4250 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 612809B5
+P 4050 850
+F 0 "#PWR0108" H 4050 600 50  0001 C CNN
+F 1 "GND" H 4055 677 50  0000 C CNN
+F 2 "" H 4050 850 50  0001 C CNN
+F 3 "" H 4050 850 50  0001 C CNN
+	1    4050 850 
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
