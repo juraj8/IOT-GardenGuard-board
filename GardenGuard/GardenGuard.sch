@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "GardenGuard"
-Date "2021-07-24"
-Rev "v0.1.0"
+Date "2021-07-25"
+Rev "v1.0.0"
 Comp "Juraj Giertl"
 Comment1 "j74a8g@gmail.com"
 Comment2 ""
@@ -803,7 +803,7 @@ F 3 "" H 2400 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 1200 1500 1200
+	1150 1200 1200 1200
 $Comp
 L power:GND #PWR03
 U 1 1 610EBA21
@@ -1914,4 +1914,105 @@ F 3 "" H 4050 850 50  0001 C CNN
 	1    4050 850 
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:R_Small R28
+U 1 1 60FE44B9
+P 5600 2450
+F 0 "R28" H 5659 2496 50  0000 L CNN
+F 1 "1K" H 5659 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5600 2450 50  0001 C CNN
+F 3 "~" H 5600 2450 50  0001 C CNN
+	1    5600 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R27
+U 1 1 60FE4A53
+P 5600 2000
+F 0 "R27" H 5659 2046 50  0000 L CNN
+F 1 "1K" H 5659 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5600 2000 50  0001 C CNN
+F 3 "~" H 5600 2000 50  0001 C CNN
+	1    5600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 60FE56CC
+P 5900 2350
+F 0 "TH1" H 5998 2396 50  0000 L CNN
+F 1 "Thermistor_NTC" H 5998 2305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 5900 2400 50  0001 C CNN
+F 3 "~" H 5900 2400 50  0001 C CNN
+	1    5900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 60FE5EC7
+P 5600 2600
+F 0 "#PWR0109" H 5600 2350 50  0001 C CNN
+F 1 "GND" H 5605 2427 50  0000 C CNN
+F 2 "" H 5600 2600 50  0001 C CNN
+F 3 "" H 5600 2600 50  0001 C CNN
+	1    5600 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2550 5600 2600
+Wire Wire Line
+	5600 2350 5600 2150
+Wire Wire Line
+	5600 1900 5600 1850
+Wire Wire Line
+	5900 2200 5900 2150
+Wire Wire Line
+	5900 2150 5600 2150
+Connection ~ 5600 2150
+Wire Wire Line
+	5600 2150 5600 2100
+Wire Wire Line
+	5900 2500 5900 2600
+$Comp
+L power:GND #PWR0110
+U 1 1 6108C869
+P 5900 2600
+F 0 "#PWR0110" H 5900 2350 50  0001 C CNN
+F 1 "GND" H 5905 2427 50  0000 C CNN
+F 2 "" H 5900 2600 50  0001 C CNN
+F 3 "" H 5900 2600 50  0001 C CNN
+	1    5900 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2150 6100 2150
+Connection ~ 5900 2150
+Text Label 6100 2150 0    50   ~ 0
+T_BAT
+$Comp
+L power:VCC #PWR0111
+U 1 1 6109C615
+P 5600 1850
+F 0 "#PWR0111" H 5600 1700 50  0001 C CNN
+F 1 "VCC" H 5615 2023 50  0000 C CNN
+F 2 "" H 5600 1850 50  0001 C CNN
+F 3 "" H 5600 1850 50  0001 C CNN
+	1    5600 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 6109CF5F
+P 1300 1200
+AR Path="/609880F0/6109CF5F" Ref="R?"  Part="1" 
+AR Path="/6109CF5F" Ref="R20"  Part="1" 
+F 0 "R20" V 1104 1200 50  0000 C CNN
+F 1 "0R" V 1195 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1300 1200 50  0001 C CNN
+F 3 "~" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 1200 1500 1200
 $EndSCHEMATC
