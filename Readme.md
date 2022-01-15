@@ -5,11 +5,13 @@
 [![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://paypal.me/JurajGiertl)
 
 
-GardenGuard is an IOT type device created for collecting temperature data from multiple points in our garden. Main usecase for this data is to give alert for freeazing weather in spring months, so user can take medigation steps to prevent frost of the blooming fruit trees.
+GardenGuard is an IOT type device created for collecting temperature data from multiple points in our garden. Main usecase for this data is to give alert for freezing weather in spring months, so user can take mitigation steps to prevent frost of the blooming fruit trees.
 
-Freezing in spring montgs takes a lot of fruits from our garden. This is an atempt to hopefully get more friuts of our garden.  
+Freezing in spring months takes a lot of fruits from our garden. This is an attempt to hopefully get more fruits of our garden.  
 
 ## Features
 
-TBD.
-
+- Uses multiple DS18x20 sensors to sample surrounding temperature.
+- Solar and battery powered. Battery is charged wia solar panel, if battery is full, device only runs out of solar.  
+- Battery voltage measurement.
+- Battery should last over span of whole winter
